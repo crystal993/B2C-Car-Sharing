@@ -110,6 +110,8 @@ return (
   }}
 />
 ```
+## **Assignment 5 (추가 구현 사항)**
+ - 페이지 전환시 부드러운 애니메이션 효과 추가
 
 ## **Getting Started**
 
