@@ -18,6 +18,7 @@ export const CarListReducer = (state, action) => {
       };
     }
     case CarActionType.GET_CAR_LIST_SUCCESS: {
+      console.log(action.carList);
       return {
         ...state,
         carList: action.carList,
@@ -36,6 +37,12 @@ export const CarListReducer = (state, action) => {
       return {
         ...state,
         segment: action.segment,
+      };
+    }
+    case CarActionType.SET_FUEL_TYPE: {
+      return {
+        ...state,
+        fuelType: action.fuelType,
       };
     }
     default:

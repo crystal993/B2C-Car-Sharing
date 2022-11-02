@@ -2,13 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../elements/Button';
 import segmentOption from '../../utils/constant/segmentOption';
-import { useCarStateContext } from '../../context/CarListProvider';
-import { api } from '../../api/api';
+import { useCarDispatch, useCarState } from '../../context/CarListProvider';
+import { useCarFilterList } from '../../api/carService';
+import fuelTypeOption from '../../utils/constant/fuelTypeOption';
+import { CarActionType } from '../../context/actionTypes';
 
 const FilteringBar = () => {
-  const { segment } = useCarStateContext();
-  const onClickHandler = e => {
-    api.getFilterCarList({ segment: e.target.value });
+  const dispatch = useCarDispatch();
+  const getCarFilterList = useCarFilterList();
+  const { segment, fuelType } = useCarState();
+  const onSegClickHandler = e => {
+    console.log(segment, fuelType);
+    dispatch({ type: CarActionType.SET_SEGMENT, segment: e.target.value });
+    dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: '' });
+    getCarFilterList({ segment: e.target.value });
+  };
+
+  const onFuelClickHandler = e => {
+    console.log(segment, fuelType);
+    dispatch({ type: CarActionType.SET_SEGMENT, segment: '' });
+    dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: e.target.value });
+    getCarFilterList({ fuelType: e.target.value });
   };
   return (
     <Wrapper>
@@ -19,7 +33,17 @@ const FilteringBar = () => {
             value={option.value}
             content={option.name}
             active={option.value === segment ? 'active' : ''}
-            onClick={onClickHandler}
+            onClick={onSegClickHandler}
+          />
+        ))}
+      {fuelTypeOption &&
+        fuelTypeOption.map((option, idx) => (
+          <Button
+            key={idx}
+            value={option.value}
+            content={option.name}
+            active={option.value === fuelType ? 'active' : ''}
+            onClick={onFuelClickHandler}
           />
         ))}
     </Wrapper>

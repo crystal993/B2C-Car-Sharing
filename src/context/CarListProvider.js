@@ -23,7 +23,7 @@ function CarListProvider({ children }) {
 }
 
 // State 를 쉽게 조회 할 수 있게 해주는 커스텀 Hook
-export function useCarStateContext() {
+export function useCarState() {
   const state = useContext(CarStateContext);
   if (!state) {
     throw new Error('Cannot find CarListProvider');
@@ -32,7 +32,7 @@ export function useCarStateContext() {
 }
 
 // Dispatch 를 쉽게 사용 할 수 있게 해주는 커스텀 Hook
-export function useCarDispatchContext() {
+export function useCarDispatch() {
   const dispatch = useContext(CarDispatchContext);
   if (!dispatch) {
     throw new Error('Cannot find CarListProvider');

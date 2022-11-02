@@ -19,7 +19,6 @@ body * {
 }
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
-  padding: 1rem 0;
 }
 h1 {
   font-size: 1.8rem;
@@ -40,10 +39,6 @@ span {
   font-size: 1rem;
 }
 p {
-  display: block;
-  padding: 1rem 0;
-  letter-spacing: 0.02rem;
-  line-height: 1.3rem;
 }
 a {
 	text-decoration: underline;

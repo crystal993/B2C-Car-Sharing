@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ title }) => {
   return (
     <Wrapper>
+      {title === '차량상세' && <></>}
       <SyledLink to="/">
         <h1>{title}</h1>
       </SyledLink>
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.subColor};
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
