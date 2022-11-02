@@ -1,20 +1,16 @@
 import { useCar } from '../stores/CarListProvider';
 import FilterBar from './component/FilterBar';
-import CarItem from './component/CarItem';
-// import { getCarList } from "../api/request";
+import CarSection from './component/CarSection';
+import LoadingCar from '../components/common/LoadingCar';
 
 const MainContainer = () => {
-  const { carList } = useCar();
-
-  console.log(carList);
-  // console.log(isError);
+  const { isLoading } = useCar();
 
   return (
     <>
+      {isLoading && <LoadingCar />}
       <FilterBar />
-      {carList?.map((car, index) => (
-        <CarItem key={index} car={car} />
-      ))}
+      <CarSection />
     </>
   );
 };

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const NewTag = () => {
-  // console.log(text);
   return <Span>신규</Span>;
 };
 
-//
-
 const Span = styled.span`
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 52px;
   height: 22px;
   background-color: #0094ff;

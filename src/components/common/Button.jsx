@@ -1,29 +1,14 @@
 import styled from 'styled-components';
 
-const Button = ({ text, isActive, onClick }) => {
+const Button = ({ text, onClick, value, isActive }) => {
   return (
     <>
-      <StyledButton className={isActive && 'active'} onClick={onClick}>
+      <StyledButton className={isActive && 'active'} value={value} onClick={onClick}>
         {text}
       </StyledButton>
     </>
   );
 };
-// active #000
-// default #d9d9d9
-
-{
-  /* <button
-className={`cat_btn hover ${catActive ? "active_btn" : null}`}
-onClick={() => handleSetCat(name)}
->
-{name}
-</button> */
-}
-
-// if active
-// background: #000;
-// color: #fff;
 
 const StyledButton = styled.button`
   margin: 0;
@@ -33,9 +18,11 @@ const StyledButton = styled.button`
   width: 62px;
   height: 27px;
   padding 5px 17px;
+  margin: 0 4px;
   border-radius: 62px;
   background: #d9d9d9;
 
+  color: #000;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;

@@ -9,7 +9,7 @@ const LoadingCar = () => {
           <g
             transform="translate(2 1)"
             stroke="#002742"
-            fill="none"
+            fill="#fff"
             fillRule="evenodd"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -42,16 +42,77 @@ const LoadingCar = () => {
             <path className="car__line car__line--bottom" d="M25.5 9.5h-19" strokeWidth="3" />
           </g>
         </Car>
+        <span>불러오는 중</span>
+        <FlashingDot />
       </SpinnerWrap>
     </>
   );
 };
 
+const dotFlashing = keyframes`
+  0% {
+    background-color: #2e2e2e;
+  }
+  50%,
+  100% {
+    background-color: transparent;
+  }
+`;
+
+const FlashingDot = styled.div`
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: #2e2e2e;
+  animation: ${dotFlashing} 1s infinite linear alternate;
+  animation-delay: 0.5s;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #2e2e2e;
+    animation: ${dotFlashing} 1s infinite alternate;
+    animation-delay: 0s;
+  }
+
+  &::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #2e2e2e;
+    animation: ${dotFlashing} 1s infinite alternate;
+    animation-delay: 1s;
+  }
+`;
+
 const SpinnerWrap = styled.div`
+  position: absolute;
+  width: 100%;
   height: 100vh;
+  background: rgba(46, 46, 46, 0.42);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  span {
+    margin: 10% 0 7% 0;
+  }
 `;
 
 const shake = keyframes`
@@ -84,6 +145,7 @@ const line = keyframes`
 `;
 
 const Car = styled.svg`
+  margin-right: 6%;
   .car__body {
     animation: ${shake} 0.2s ease-in-out infinite alternate;
   }

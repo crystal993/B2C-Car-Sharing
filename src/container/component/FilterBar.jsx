@@ -1,52 +1,36 @@
-// import { CarService, useGetCarList } from '../../api/request';
+import styled from 'styled-components';
 import { CarService } from '../../api/request';
 import Button from '../../components/common/Button';
-import NewTag from '../../components/common/NewTag';
-// import { useCarList } from '../../api/request';
-// import { useCarChange } from '../../stores/CarListProvider';
+import { useCar } from '../../stores/CarListProvider';
+import { segmentType } from '../../utils/FilterType';
 
 const FilterBar = () => {
-  // const getCar = useCarList();
   const getCar = CarService.useCarList();
-
-  // const { setFuelType } = useCarChange();
-  // if(diff_date <= 1) {
-  //   console.log('new');
-  // }
-  // console.log(diff_date);
-  // // const create_date = convertDate(car.createdAt);
-  // // console.log(create_date);
-  // return (
-  //   <article>
-  //     {car.attribute.brand}
-  //     {car.attribute.name}
-  //     {car.attribute.segment}
-  //     {car.attribute.fuelType}
-  //     {car.attribute.imageUrl}
-  //     {car.amount}
-  //     {car.createdAt}
-  //   </article>
-  // );
-  const onButtonClick = () => {
-    console.log('onClick');
-    // fuelType: "gasoline" | "hybrid" | "ev"
-    // segment: "C" | "D" | "E" | "SUV"
-    getCar({ fuelType: 'gasoline' });
-    // getCar({fuelType: "gasine"});
-    // useGetCarList({fuelType: "gas"});
-    //  CarService.useGetCarList({fuelType:"gas"});
-    // setFuelType('gas');
-    // setFuelType
+  const { segment } = useCar();
+  const onSegmentClick = e => {
+    getCar({ segment: e.target.value });
   };
   return (
-    <>
-      <Button text="전체" isActive />
-      <Button text="대형" onClick={onButtonClick} />
-      <Button text="중형" />
-      <Button text="소형" />
-      <NewTag />
-    </>
+    <FilterSection>
+      {segmentType &&
+        segmentType.map((type, index) => (
+          <Button
+            key={index}
+            value={type.value}
+            text={type.name}
+            isActive={type.value === segment && true}
+            onClick={onSegmentClick}
+          />
+        ))}
+    </FilterSection>
   );
 };
+
+const FilterSection = styled.section`
+  height: 40px;
+  padding: 6px 4px;
+
+  border-bottom: 1px solid #000;
+`;
 
 export default FilterBar;

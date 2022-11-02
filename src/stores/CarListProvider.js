@@ -59,12 +59,12 @@ const carReducer = (state, action) => {
     //     fuelType: action.fuelType,
     //   };
     // }
-    // case CarActionType.SET_SEGMENT: {
-    //   return {
-    //     ...state,
-    //     segment: action.segment,
-    //   };
-    // }
+    case CarActionType.SET_SEGMENT: {
+      return {
+        ...state,
+        segment: action.segment,
+      };
+    }
     // case CarActionType.SET_IS_ERROR: {
     //   return {
     //     ...state,
