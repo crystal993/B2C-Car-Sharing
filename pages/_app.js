@@ -3,14 +3,19 @@ import { GlobalStyle } from '../src/styles/globals';
 import '@fontsource/Inter/400.css';
 import '@fontsource/Inter/500.css';
 import '@fontsource/Inter/700.css';
+import CarDetail from './car/[id]';
+import CarDetailProvider from '../src/stores/CarDetailProvider';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout ?? (page => page);
   return (
     <CarProvider>
       <GlobalStyle />
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </CarProvider>
   );
 }
 
-export default MyApp;
+CarDetail.getLayout = function getLayout(page) {
+  return <CarDetailProvider>{page}</CarDetailProvider>;
+};

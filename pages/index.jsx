@@ -1,38 +1,37 @@
 import { useEffect } from 'react';
 import Layout from '../src/components/layout/Layout';
-import MainContainer from '../src/container/Main';
+import MainContainer from '../src/container/Main/Main';
 import { CarService } from '../src/api/request';
-import { CarActionType, useCarChange } from '../src/stores/CarListProvider';
+import { useCar, useCarChange } from '../src/stores/CarListProvider';
+import { CarActionType } from '../src/stores/ActionTypes';
 
-const Home = ({ payload }) => {
+const Main = ({ payload }) => {
   const dispatch = useCarChange();
+  const { segment, fuelType } = useCar();
   useEffect(() => {
-    dispatch({ type: CarActionType.GET_CAR_LIST, carList: payload });
-  }, [payload]);
+    if (!segment && !fuelType) {
+      dispatch({ type: CarActionType.GET_CAR_LIST, carList: payload });
+    }
+  }, [payload, segment, fuelType, dispatch]);
 
-  return (
-    <>
-      <Layout>
-        <MainContainer />
-      </Layout>
-    </>
-  );
+  return <Layout content={<MainContainer />} />;
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   try {
     const {
       data: { payload },
     } = await CarService.getCarList();
+
     return {
       props: { payload },
-      revalidate: 60,
+      revalidate: 600,
     };
   } catch (err) {
     return {
       notFound: true,
     };
   }
-}
+};
 
-export default Home;
+export default Main;

@@ -1,22 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header from './Header';
+import { MainLayout } from './styles';
 
-const Layout = props => {
-  // 전체차량
-  // 차량상세
-  // 뒤로가기 버튼
-
+const Layout = ({ content, isDetail }) => {
   return (
     <>
-      <Header />
-      <Main>{props.children}</Main>
+      <Header isDetail={isDetail} />
+      <MainLayout>{content}</MainLayout>
     </>
   );
 };
-
-const Main = styled.main`
-  height: calc(100% - 60px);
-`;
-
 export default Layout;

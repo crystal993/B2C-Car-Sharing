@@ -1,25 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
+import Link from 'next/link';
+import { HeaderStyle } from './styles';
 
-const Header = () => {
-  // 전체차량
-  // 차량상세
-  // 뒤로가기 버튼
-  const title = '전체차량';
-  // const title = "차량상세";
-  return <HeaderStyle>{title}</HeaderStyle>;
+const Header = ({ isDetail }) => {
+  const title = isDetail ? '차량상세' : '전체차량';
+  return (
+    <HeaderStyle>
+      {isDetail && (
+        <Link href={'/'}>
+          <span>
+            <ArrowBackRoundedIcon />
+          </span>
+        </Link>
+      )}
+      {title}
+    </HeaderStyle>
+  );
 };
 
-const HeaderStyle = styled.header`
-  width: 100%;
-  height: 60px;
-  text-align: center;
-  padding: 19px 0;
-
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 21px;
-
-  border-bottom: 1px solid #000;
-`;
 export default Header;

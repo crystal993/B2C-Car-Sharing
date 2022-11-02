@@ -1,10 +1,6 @@
 import instance from './axiosInstance';
-import { CarActionType, useCarChange } from '../stores/CarListProvider';
-
-// https://preonboarding.platdev.net/api/cars
-// fuelType=ev&segment=C
-// fuelType: "gasoline" | "hybrid" | "ev"
-// segment: "C" | "D" | "E" | "SUV"
+import { useCarChange } from '../stores/CarListProvider';
+import { CarActionType } from '../stores/ActionTypes';
 
 export const CarService = {
   getCarList: () => {
@@ -14,8 +10,8 @@ export const CarService = {
     const dispatch = useCarChange();
     return async params => {
       dispatch({ type: CarActionType.SET_SEGMENT, segment: params.segment });
+      dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: params.fuelType });
       dispatch({ type: CarActionType.GET_CAR_LIST_LOADING });
-      // dispatch({ type: IssueActionTypes.GET_ISSUE_LIST_LOADING });
       try {
         const config = {
           params: params,

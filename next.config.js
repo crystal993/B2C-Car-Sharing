@@ -6,7 +6,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'interview.platdev.net',
-        port: '',
         pathname: '/**',
       },
     ],

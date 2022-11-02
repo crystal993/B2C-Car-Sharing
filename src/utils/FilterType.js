@@ -23,23 +23,26 @@ export const segmentType = [
 
 export const fuelType = [
   {
-    name: 'gasoline',
-    value: '가솔린',
+    name: '가솔린',
+    value: 'gasoline',
   },
   {
-    name: 'ev',
-    value: '전기',
+    name: '전기',
+    value: 'ev',
   },
   {
-    name: 'hybrid',
-    value: '하이브리드',
-  },
-  {
-    name: '소형',
-    value: 'C',
-  },
-  {
-    name: 'SUV',
-    value: 'SUV',
+    name: '하이브리드',
+    value: 'hybrid',
   },
 ];
+
+const findTypeName = (array, value) => {
+  const result = array.filter(item => item.value === value);
+  return result.length ? result[0].name : '-';
+};
+export const findSegmentName = value => {
+  return findTypeName(segmentType, value);
+};
+export const findFuelName = value => {
+  return findTypeName(fuelType, value);
+};

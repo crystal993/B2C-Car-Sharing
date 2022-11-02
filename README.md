@@ -1,17 +1,23 @@
 # B2C 차량대여 서비스
 
+![badge](https://img.shields.io/badge/React-61dafb?logo=React&logoColor=white&style=flat-square)
+![badge](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white)
+![badge](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white&style=flat-square)
+
 > pre-onboarding-7th-2-1-9
 
 ## **Description**
 
-차량 대여를 위해 차량 목록을 불러와서 표시해주는 서비스입니다.
+차량 대여를 위해 차량 목록을 불러와서 표시해주는 서비스입니다.  
+NEXT.js를 사용하여 제작하였습니다.
 
 ## **Demo Page**
 
-[Demo Page]()
+--
 
-<p align="center">
-</p>
+|                                                   <h2>Google Chrome</h2>                                                    |                                                    <h2>Apple Safari</h2>                                                    |
+| :-------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://user-images.githubusercontent.com/74575497/199449847-3b1a301a-876c-4215-b206-9a6ab27a2418.gif" width=300> | <img src="https://user-images.githubusercontent.com/74575497/199449878-badee817-e266-4b4d-a4bf-d2df5b3a52b5.gif" width=300> |
 
 ## **Getting Started**
 
