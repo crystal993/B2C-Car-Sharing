@@ -1,5 +1,19 @@
+import React from 'react';
+import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom';
+import DetailPage from './pages/DetailPage';
+import MainPage from './pages/MainPage';
+import ErrorPage from './pages/ErrorPage';
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/detail/:id" element={<DetailPage />} />
+        <Route path="/404" element={<ErrorPage />} />
+        <Route path="/*" element={<Navigate to="/main" />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
