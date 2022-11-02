@@ -24,3 +24,10 @@ yarn-error.log*
 
 #git-commit-template
 git-commit-template.txt
+
+#env
+.env
+
+# next.js
+/.next/
+/out/

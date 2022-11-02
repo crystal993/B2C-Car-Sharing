@@ -10,8 +10,8 @@ html {
   font-size: 62.5%;
 }
 body {
-	background-color: #5e5d5d;
-  font-family: 'Nanum Gothic Coding', monospace;
+	background-color: #ffffff;
+  font-family: "Inter";
 }
 body * {
 	background-color: transparent;

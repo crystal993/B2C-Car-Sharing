@@ -1,8 +1,9 @@
 {
-  "name": "wanted_assignment_03",
+  "name": "pre-onboarding-7th-2-1-9",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/inter": "^4.5.14",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,9 +13,9 @@
     "@types/react-dom": "^18.0.8",
     "axios": "0.27.2",
     "dotenv": "^16.0.3",
+    "next": "^13.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2",
@@ -24,10 +25,9 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "format": "prettier --write --cache .",
     "lint": "eslint --cache ."
   },

@@ -10,7 +10,9 @@ const color = {
   bgColor: '#FFFFFF',
 };
 
-export const Theme = {
+const theme = {
   size,
   color,
 };
+
+export default theme;
