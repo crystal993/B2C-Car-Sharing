@@ -5,7 +5,7 @@ import { useCarState } from '../../context/CarListProvider';
 import MsgBox from '../elements/MsgBox';
 import CarItem from './CarItem';
 
-const CarSection = () => {
+const CarList = () => {
   const state = useCarState();
   const getAllCarList = useAllCarList();
   const { carList, isLoading } = state;
@@ -49,4 +49,4 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export default CarSection;
+export default CarList;

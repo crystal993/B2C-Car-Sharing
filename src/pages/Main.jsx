@@ -1,12 +1,12 @@
 import React from 'react';
-import CarSection from '../components/main/CarSection';
+import CarList from '../components/main/CarList';
 import FilteringBar from '../components/main/FilteringBar';
 
 const Main = () => {
   return (
     <>
       <FilteringBar />
-      <CarSection />
+      <CarList />
     </>
   );
 };

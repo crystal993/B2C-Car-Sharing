@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { ConvertAmount } from '../../utils/ConvertAmount';
-import { IsCreatedWithinDay } from '../../utils/IsCreatedWithinDay';
+import { convertAmount } from '../../utils/function/convertAmount';
+import { IsCreatedWithinDay } from '../../utils/function/IsCreatedWithinDay';
 import Badge from '../elements/Badge';
 
 export default function CarItem({ car }) {
@@ -17,7 +17,7 @@ export default function CarItem({ car }) {
           <Contents>
             {car.attribute.segment} / {car.attribute.fuelType}
           </Contents>
-          <Contents>월 {ConvertAmount(car.amount)}원 부터</Contents>
+          <Contents>월 {convertAmount(car.amount)}원 부터</Contents>
         </ContentsWrapper>
       </TextWrapper>
       <ImgWrapper>

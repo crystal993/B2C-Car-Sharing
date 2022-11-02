@@ -12,14 +12,12 @@ const FilteringBar = () => {
   const getCarFilterList = useCarFilterList();
   const { segment, fuelType } = useCarState();
   const onSegClickHandler = e => {
-    console.log(segment, fuelType);
     dispatch({ type: CarActionType.SET_SEGMENT, segment: e.target.value });
     dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: '' });
     getCarFilterList({ segment: e.target.value });
   };
 
   const onFuelClickHandler = e => {
-    console.log(segment, fuelType);
     dispatch({ type: CarActionType.SET_SEGMENT, segment: '' });
     dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: e.target.value });
     getCarFilterList({ fuelType: e.target.value });

@@ -18,7 +18,6 @@ export const CarListReducer = (state, action) => {
       };
     }
     case CarActionType.GET_CAR_LIST_SUCCESS: {
-      console.log(action.carList);
       return {
         ...state,
         carList: action.carList,

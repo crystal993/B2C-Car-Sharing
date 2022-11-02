@@ -21,7 +21,6 @@ export function useAllCarList() {
 export function useCarFilterList() {
   const dispatch = useCarDispatch();
   return async params => {
-    console.log(params);
     dispatch({ type: CarActionType.SET_SEGMENT, segment: params.segment });
     dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: params.fuelType });
     dispatch({ type: CarActionType.GET_CAR_LIST_LOADING });
