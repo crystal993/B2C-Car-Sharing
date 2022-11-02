@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow: hidden;
 
-    > div {
+    > div, > div > div {
       height: 100%;
     }
   }

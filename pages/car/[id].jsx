@@ -1,9 +1,11 @@
+import { NextSeo } from 'next-seo';
 import { useEffect } from 'react';
 import { CarService } from '../../src/api/request';
 import Layout from '../../src/components/layout/Layout';
 import DetailContainer from '../../src/container/Detail/Detail';
 import { CarActionType } from '../../src/stores/ActionTypes';
 import { useCarDetailChange } from '../../src/stores/CarDetailProvider';
+import { convertCurrency } from '../../src/utils/convertCurrency';
 
 const CarDetail = ({ data }) => {
   const dispatch = useCarDetailChange();
@@ -13,7 +15,25 @@ const CarDetail = ({ data }) => {
     }
   }, [data, dispatch]);
 
-  return <Layout content={<DetailContainer />} isDetail />;
+  const curreny = convertCurrency(data[0].amount);
+  return (
+    <>
+      <NextSeo
+        title={`${data[0].attribute.brand} ${data[0].attribute.name}`}
+        description={curreny}
+        canonical="https://pre-onboarding-7th-2-1-9.vercel.app/"
+        openGraph={{
+          type: 'website',
+          url: `https://pre-onboarding-7th-2-1-9.vercel.app/car/${data[0].id}`,
+          title: `${data[0].attribute.brand} ${data[0].attribute.name}`,
+          description: curreny,
+          images: [{ url: data[0].attribute.imageUrl }],
+          site_name: 'B2C 차량대여 서비스',
+        }}
+      />
+      <Layout content={<DetailContainer />} isDetail />
+    </>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -34,7 +54,7 @@ export const getStaticProps = async context => {
 
     return {
       props: { data },
-      revalidate: 5,
+      revalidate: 30,
     };
   } catch (err) {
     return {

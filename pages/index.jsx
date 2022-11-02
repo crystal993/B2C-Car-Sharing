@@ -14,7 +14,11 @@ const Main = ({ payload }) => {
     }
   }, [payload, segment, fuelType, dispatch]);
 
-  return <Layout content={<MainContainer />} />;
+  return (
+    <>
+      <Layout content={<MainContainer />} />
+    </>
+  );
 };
 
 export const getStaticProps = async () => {

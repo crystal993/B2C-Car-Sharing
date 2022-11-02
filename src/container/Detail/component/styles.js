@@ -36,7 +36,7 @@ export const NameDiv = styled.div`
     padding-left: 20px;
     font-size: 20px;
   }
-  p.name_tag = {
+  p.name_tag {
     font-size: 24px;
   }
 `;
