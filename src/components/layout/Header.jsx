@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const Header = ({ title }) => {
   return (
     <Wrapper>
-      <SyledLink href="/">
+      <SyledLink to="/">
         <h1>{title}</h1>
       </SyledLink>
     </Wrapper>
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 const SyledLink = styled(Link)`
   width: 100%;
   height: 6rem;
-  color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.black};
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -32,7 +32,7 @@ const SyledLink = styled(Link)`
   text-decoration: none;
   font-weight: 700;
   font-size: 1.7rem;
-  border-bottom: 1px solid ${({ theme }) => theme.color.black};
+  border-bottom: 1px solid ${({ theme }) => theme.black};
 `;
 
 export default Header;
