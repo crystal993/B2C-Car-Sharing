@@ -12,7 +12,7 @@ export const DetailContainer = () => {
   const { state } = useLocation();
   return (
     <Wrapper>
-      <SEOMetaTag props={state} />
+      <SEOMetaTag />
       <ImgWrapper>
         <Img src={state.attribute.imageUrl} />
       </ImgWrapper>
@@ -48,6 +48,7 @@ export const DetailContainer = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 31rem;
