@@ -21,7 +21,8 @@ const Btn = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1.8rem;
-  width: 6.2rem;
+  min-width: 6.2rem;
+  width: max-content;
   height: 2.7rem;
   color: ${props => (props.active === 'active' ? props.theme.white : props.theme.black)};
   border-radius: 6.2rem;
