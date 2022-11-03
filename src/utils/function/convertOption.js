@@ -6,6 +6,7 @@ export const segConvertName = segVal => {
     if (seg.value === segVal) {
       return seg.name;
     }
+    return null;
   });
   return result[0].name;
 };
@@ -15,6 +16,7 @@ export const fuelConvertName = fuelVal => {
     if (fuel.value === fuelVal) {
       return fuel.name;
     }
+    return null;
   });
   return result[0].name;
 };

@@ -4,14 +4,15 @@ import styled from 'styled-components';
 import { convertAmount } from '../../utils/function/convertAmount';
 import { fuelConvertName, segConvertName } from '../../utils/function/convertOption';
 import { convertUsableDate } from '../../utils/function/convertUsableDate';
+import SEOMetaTag from '../metaTag/SEOMetaTag';
 import DetailInfoBar from './DetailInfoBar';
 import DetailSectionBar from './DetailSectionBar';
 
 export const DetailContainer = () => {
   const { state } = useLocation();
-  console.log(state);
   return (
     <Wrapper>
+      <SEOMetaTag props={state} />
       <ImgWrapper>
         <Img src={state.attribute.imageUrl} />
       </ImgWrapper>
