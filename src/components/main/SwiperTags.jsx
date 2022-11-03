@@ -12,7 +12,7 @@ const SwiperTags = props => {
 
   return (
     <Wrapper>
-      <Swiper slidesPerView={5} spaceBetween={1} initialSlide={1} centeredSlides={true}>
+      <Swiper slidesPerView={5} spaceBetween={-1} initialSlide={2} centeredSlides={true}>
         {segmentOption &&
           segmentOption.map((option, idx) => (
             <SwiperSlide key={idx}>
@@ -46,7 +46,8 @@ const Wrapper = styled.main`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
 `;
 

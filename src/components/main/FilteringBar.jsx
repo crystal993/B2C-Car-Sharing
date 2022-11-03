@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   column-gap: 0.8rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 `;

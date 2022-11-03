@@ -42,6 +42,7 @@ const CarList = () => {
 };
 
 const Wrapper = styled.div`
+  width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: row;
