@@ -1,16 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../elements/Button';
-import segmentOption from '../../utils/constant/segmentOption';
-import { useCarDispatch, useCarState } from '../../context/CarListProvider';
+import { useCarDispatch } from '../../context/CarListProvider';
 import { useCarFilterList } from '../../api/carService';
-import fuelTypeOption from '../../utils/constant/fuelTypeOption';
 import { CarActionType } from '../../context/actionTypes';
+import SwiperTags from './SwiperTags';
 
 const FilteringBar = () => {
   const dispatch = useCarDispatch();
   const getCarFilterList = useCarFilterList();
-  const { segment, fuelType } = useCarState();
+
   const onSegClickHandler = e => {
     dispatch({ type: CarActionType.SET_SEGMENT, segment: e.target.value });
     dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: '' });
@@ -22,28 +20,10 @@ const FilteringBar = () => {
     dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: e.target.value });
     getCarFilterList({ fuelType: e.target.value });
   };
+
   return (
     <Wrapper>
-      {segmentOption &&
-        segmentOption.map((option, idx) => (
-          <Button
-            key={idx}
-            value={option.value}
-            content={option.name}
-            active={option.value === segment ? 'active' : ''}
-            onClick={onSegClickHandler}
-          />
-        ))}
-      {fuelTypeOption &&
-        fuelTypeOption.map((option, idx) => (
-          <Button
-            key={idx}
-            value={option.value}
-            content={option.name}
-            active={option.value === fuelType ? 'active' : ''}
-            onClick={onFuelClickHandler}
-          />
-        ))}
+      <SwiperTags onSegClickHandler={onSegClickHandler} onFuelClickHandler={onFuelClickHandler} />
     </Wrapper>
   );
 };
@@ -52,9 +32,11 @@ const Wrapper = styled.div`
   padding: 0.7rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   column-gap: 0.8rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
 `;
 
 export default FilteringBar;
