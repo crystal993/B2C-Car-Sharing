@@ -6,9 +6,6 @@ const GlobalStyle = createGlobalStyle`
 * {
 	box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-}
 body {
 	background-color: #ffffff;
   font-family: "Inter";
@@ -20,29 +17,17 @@ body * {
 h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
 }
-h1 {
-  font-size: 1.8rem;
-}
-h2 {
-  font-size: 1.4rem;
-}
-h3 {
-  font-size: 1.2rem;
-}
-h4 {
-  font-size: 1rem;
-}
-h5 {
-  font-size: 0.8rem;
-}
-span {
-  font-size: 1rem;
-}
-p {
-}
+:root {
+    font-size: 10px;
+  }
 a {
 	text-decoration: underline;
   cursor: pointer;
+}
+/* Layout */
+html {
+    max-width: 450px;
+    margin: 0 auto;
 }
 `;
 export default GlobalStyle;

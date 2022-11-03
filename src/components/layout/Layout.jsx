@@ -13,20 +13,8 @@ const Layout = props => {
   );
 };
 
-const Wrapper = styled.div`
-  width: ${props => props.theme.mobile_l};
-  margin: 0 auto;
-`;
+const Wrapper = styled.div``;
 
-const Main = styled.main`
-  @media (max-width: ${props => props.theme.mobile_l}) {
-    /* Mobile_L*/
-    width: 100%;
-  }
-  @media (max-width: ${({ theme }) => theme.mobile_s}) {
-    /* Mobile_S*/
-    width: 100%;
-  }
-`;
+const Main = styled.main``;
 
 export default Layout;
