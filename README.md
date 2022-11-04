@@ -8,11 +8,16 @@
 
 ## 📝 Description 
 차량 대여를 위해 차량 목록을 불러오는 사이트입니다.  
-전역 상태 관리로는 React에 내장되어있는 Context API를 사용했고, 
+전역 상태 관리는 React에 내장되어있는 Context API를 사용했고, 
 스타일 라이브러리는 Styled-components를 사용했습니다.
 
 <br>
 
+## 🛠️ Dev Tools
+
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> <img src="https://img.shields.io/badge/amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"> 
+
+<br>
 
 ## 📝 API 보러가기 
 
@@ -34,11 +39,6 @@
 팀 토의를 통해 코드 리뷰를 진행했습니다. 
 
 
-<br>
-
-## 📚 사용 Library
-
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> <img src="https://img.shields.io/badge/amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"> 
 
 <br>
 
@@ -48,10 +48,6 @@
 - [🖥 프로젝트 실행 방법](https://wanted-07-team-9.github.io/wanted_assignment_02/)
 
 <br>
-
-## 🛠️ Dev Tools
-
- <img height="32" width="96" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 
 ## **🖥 프로젝트 실행 방법**
 
@@ -285,7 +281,8 @@ Chrome | Whale
 
 ## 차량이 없을 때, 차량을 불러올 때 
 -  CarList.jsx
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/components/main/CarList.jsx#L8-L39
+
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/components/main/CarList.jsx#L8-L42
 
 차량을 불러올 때와 차량이 없을 때 텍스트를 다르게 해서 `MsgBox` 컴포넌트를 재사용했습니다. 
 Context API에서 전역으로 관리하는 isloading 변수가 true일 때 불러오는 중을 표시하고, 
@@ -297,11 +294,14 @@ Context API에서 전역으로 관리하는 isloading 변수가 true일 때 불�
 - 차량 상세
 ![image](https://user-images.githubusercontent.com/72599761/199726247-3e5f1fea-d2ee-4e6a-b25d-daa6fc9f656e.png)
 
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/components/main/CarItem.jsx#L8-L29
+
+
 <br>
 
 # Assignment 4 (추가 구현 사항) - SEO
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/0878117dc372641914985e4eb9022d6183f1818f/src/components/metaTag/SEOMetaTag.jsx#L1-L22
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/components/metaTag/SEOMetaTag.jsx#L1-L22
 
 ![image](https://user-images.githubusercontent.com/72599761/199739247-b1f949a4-e1f2-4a2d-84c2-44700f9347e4.png)
 
@@ -318,7 +318,7 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/0878117dc37264
 ## 5-1. 태그 스와이퍼 기능 구현 
 ![스와이퍼기능구현](https://user-images.githubusercontent.com/72599761/199727335-ddbdee7e-462b-471e-bd2e-64c8374f9821.gif)
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/components/main/SwiperTags.jsx#L10-L43
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/components/main/SwiperTags.jsx#L10-L43
 
 - Swiper.js 리액트 버전을 사용하여 구현하였습니다. 
 - 한 슬라이드에 5개가 보이도록 구현하고, 초기값을 3번째 인덱스에 존재하는 태그로 지정해주었습니다. 
@@ -334,32 +334,57 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb1
 실제로 서버 API로 응답받는 데이터와 요구사항으로 주어지는 화면상의 데이터 형태가 달랐습니다.  
 사용자가 보기 쉽게 구현해야만 했습니다. 
 
-#### segmentOption, fuelTypeOption 함수 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/utils/constant/segmentOption.js#L1-L9 
+<br>
 
+#### segmentOption, fuelTypeOption 함수 
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/utils/constant/segmentOption.js#L1-L9
 - option을 value, name으로 나눠서 API로 받아오는 값을 value, 화면상에 보여지는 값을 name으로 분류하여 파일을 만들어서 따로 관리하였습니다. 
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/utils/function/convertOption.js#L1-L22
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/utils/function/convertOption.js#L1-L22
 
 - segment와 fuelType option의 value를 이름으로 변환해주는 함수이다. 
 - 서버에서 받은 값을 화면 상에 UI로 보기 쉽게 변환해주는 함수입니다. 
 - segVal은 서버에서 받아오는 segment값이므로 segmentOption 배열에 filter로 value와 일치하면 name을 반환하게끔 코드를 짰습니다. 
 
+<br>
+
 ### 돈 단위 변환 
 ![image](https://user-images.githubusercontent.com/72599761/199732574-6b191def-5e79-482f-9348-fa2e522c642e.png)
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/utils/function/convertAmount.js#L1-L3
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/utils/function/convertAmount.js#L1-L3
 
+<br>
 
 ### 이용 가능 날짜 변환 
 
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/utils/function/convertUsableDate.js#L1-L9
-
-### 하루 이내일 때 변환 
-
-https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb107c6d9bf8e87ff8e0fab3db273/src/utils/function/IsCreatedWithinDay.js#L1-L13
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/utils/function/convertUsableDate.js#L1-L9
 
 <br>
+
+## 5-3. GlobalStyle과 Theme으로 스타일 관리 
+
+### GlobalStyle 
+
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/styles/GlobalStyle.jsx#L1-L33
+
+- styled-reset을 이용해서 전체 style을 초기화 시켰습니다. 
+- :root로 전체 font-size를 10px로 주고, 10px이 1rem이 되도록 만들었습니다. 
+- 과제 요구사항으로 주어진 Inter font를 적용했습니다. 
+
+```javascript
+:root {
+    font-size: 10px;
+  }
+```
+
+<br>
+
+### Theme 
+
+https://github.com/crystal993/B2C-Car-Sharing/blob/57ac8983164cb883e4eb1a66edbb22c8eed7f68a/src/styles/theme.js#L1-L12
+
+- 과제 요구사항으로 주어진 색상과 반응형 크기를 Theme에서 관리하여 styled-components에서 props로 받아서 사용할 수 있도록 했습니다. 
+
 
 ## 💡 logic
 
