@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as BackIcon } from '../../assets/icons/icon_back.svg';
+import { useCarDispatch } from '../../context/CarListProvider';
+import { CarActionType } from '../../context/actionTypes';
 
 const Header = ({ title }) => {
+  const dispatch = useCarDispatch();
+  const onClickHandler = () => {
+    dispatch({ type: CarActionType.SET_SEGMENT, segment: '' });
+    dispatch({ type: CarActionType.SET_FUEL_TYPE, fuelType: '' });
+  };
   return (
     <Wrapper>
       {title === '차량상세' && (
         <Link to="/">
-          <StyledBackIcon />
+          <StyledBackIcon onClick={onClickHandler} />
         </Link>
       )}
       <TitleWrapper>
