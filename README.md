@@ -135,6 +135,10 @@ open http://localhost:3000
             📄IsCreatedWithinDay.js
 ```
 
+- api : CarService 에서 컴포넌트 단에서 함수 호출만 가능하도록 최대한 관심사를 분리했습니다.
+- context : context에서 사용하는 actionTypes, CarListProvider, CarListReducer 로 분리해서 썼습니다. 
+- utils : 상수와 자주 쓰이는 함수들을 따로 분리해놨습니다. 
+
 </div>
 </details>
 
@@ -170,7 +174,6 @@ open http://localhost:3000
 </div>
 </details>
 
-<br>
 
 <details>
 <summary>코딩 컨벤션 규칙</summary>
@@ -233,29 +236,14 @@ open http://localhost:3000
 
 ### dev
 
-- tailwindcss
+- styled-components 
+- 
+
 </div>
 </details>
 
 <br>
 
-## 구현 목록
-### Assignment 1: heavy_check_mark:
-- 필수 요구 사항 
-    - Figma 상의 디자인 및 기능 구현 
-        - 차량 리스트 
-            - 차량이 없을 때 처리
-            - 차량 불러오는 중 처리
-        - 차량 상세
-
-###  - 추가 구현 사항 :heavy_multiplication_x:
-   - SEO
-        - 카카오톡, 페이스북에 공유 시 아래의 내용이 미리보기로 노출되도록 해야 함
-            - 제목: car.brand + [car.name](http://car.name/)
-            - 내용: 월 car.amount 원
-            - 사진: 차량 사진
-
-<br>
 
 # Assignment 1
 
