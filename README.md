@@ -6,6 +6,36 @@
 
 <br>
 
+## 📝 Description 
+차량 대여를 위해 차량 목록을 불러오는 사이트입니다.  
+전역 상태 관리로는 React에 내장되어있는 Context API를 사용했고, 
+스타일 라이브러리는 Styled-components를 사용했습니다.
+
+<br>
+
+
+## 📝 API 보러가기 
+
+### [B2C Car sharing API](https://principled-bergamot-e8d.notion.site/API-3f5f9809a5734abab91130f60f2ea27b)
+과제에 사용된 API 상세 설명입니다. 
+
+<br>
+
+## 💅 Figma 보러가기 
+
+### [B2C Car Figma](https://www.figma.com/file/XdncFdXWdILLifRIJKqIi1/%EC%8B%A4%EB%AC%B4%ED%98%95-%EB%A9%B4%EC%A0%91---%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8)
+과제에서 요구사항으로 주어진 Figma입니다. 
+
+<br>
+
+## 👨‍👩‍👧‍👦 팀 토의 보러가기 
+
+### [B2C Car Team Discussion](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/discussions)
+팀 토의를 통해 코드 리뷰를 진행했습니다. 
+
+
+<br>
+
 ## 📚 사용 Library
 
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/styled_components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> <img src="https://img.shields.io/badge/amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"> 
@@ -213,13 +243,6 @@ open http://localhost:3000
 
 <br>
 
-## Description 
-차량 대여를 위해 차량 목록을 불러오는 사이트입니다.  
-전역 상태 관리로는 React에 내장되어있는 Context API를 사용했고, 
-스타일 라이브러리는 Styled-components를 사용했습니다.
-
-<br>
-
 ## 구현 목록
 ### Assignment 1: heavy_check_mark:
 - 필수 요구 사항 
@@ -338,9 +361,22 @@ https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/479024899bffb1
 
 <br>
 
-
 ## 💡 logic
 
 ### :one: logic one
 
 https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/blob/420610c33258cf72482fe9e3f5c77ccc89ce2249/src/App.js#L1-L3
+
+
+# 프리온보딩 9팀
+
+| <img src="https://avatars.githubusercontent.com/u/58911113?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/74575497?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/72599761?v=4" width="120" height="120"/> |
+| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|                                           👑 권준                                           |                                           김경훈                                            |                                           김수정                                           |
+|                            [@jun-05](https://github.com/jun-05)                             |                          [@tirhande](https://github.com/tirhande)                           |                        [@crystal993](https://github.com/crystal993)                        |
+
+| <img src="https://avatars.githubusercontent.com/u/104307213?v=4" width="120" height="120"/> | <img src="https://avatars.githubusercontent.com/u/94212747?v=4" width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/77476348?v=4"  width="120" height="120" /> | <img src="https://avatars.githubusercontent.com/u/76990149?v=4" width="120" height="120"/> |
+| :-----------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|                                           송슬기                                            |                                           오나래                                            |                                            이창훈                                            |                                           전이진                                           |
+|                          [@songseul](https://github.com/songseul)                           |                            [@NR0617](https://github.com/NR0617)                             |                 [@anotheranotherhoon](https://github.com/anotheranotherhoon)                 |                          [@pongdang](https://github.com/pongdang)                          |
+
