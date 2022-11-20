@@ -31,14 +31,6 @@
 ### [B2C Car Figma](https://www.figma.com/file/XdncFdXWdILLifRIJKqIi1/%EC%8B%A4%EB%AC%B4%ED%98%95-%EB%A9%B4%EC%A0%91---%EC%9B%B9-%ED%94%84%EB%A1%A0%ED%8A%B8)
 과제에서 요구사항으로 주어진 Figma입니다. 
 
-<br>
-
-## 👨‍👩‍👧‍👦 팀 토의 보러가기 
-
-### [B2C Car Team Discussion](https://github.com/Wanted-07-team-9/pre-onboarding-7th-2-1-9/discussions)
-팀 토의를 통해 코드 리뷰를 진행했습니다. 
-
-
 
 <br>
 
