@@ -2,7 +2,7 @@
 
 ## **✨ 배포링크**
 
-### [pre-onboarding-7th-2-1-9](https://pre-onboarding-7th-2-2-0.vercel.app/)
+### [한국임상정보 바로가기](https://pre-onboarding-7th-2-2-0.vercel.app/)
 
 <br>
 
