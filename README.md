@@ -2,7 +2,7 @@
 
 ## **✨ 배포링크**
 
-### [한국임상정보 바로가기](https://pre-onboarding-7th-2-2-0.vercel.app/)
+### [B2C-Car-Sharing 바로가기](https://pre-onboarding-7th-2-2-0.vercel.app/)
 
 <br>
 
